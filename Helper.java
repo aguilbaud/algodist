@@ -17,16 +17,19 @@ public class Helper {
             ((MyNode)n).parent = n.getNeighbors().get(1);
         }
     }
-
+    public static void setSize(int n){
+    	k_0 = n;
+    }
+    
     public static int firstFree(List<Integer> neigh){
         List<Integer> ints = new ArrayList<Integer>();
 
         for (int i = 0; i < k_0; i++)
             ints.add(i);
-
+       
         ints.removeAll(neigh);
-
-        System.out.println("DEBUG - Helper.firstFree: IN  " + neigh.toString() + ", OUT " + Collections.min(ints));
+      
+       // System.out.println("DEBUG - Helper.firstFree: IN  " + neigh.toString() + ", OUT " + Collections.min(ints));
         return Collections.min(ints);
 
 
